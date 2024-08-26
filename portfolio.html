@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #060c21;
+    color: #fff;
+    list-style: none;
+
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.header {
+    width: 100%;
+    /* background: rgba(241, 232, 232, 0.1); */
+    background: #060c21;
+}
+.header .logo{
+    color: cyan;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.navbar a {
+    /* color: #fff; */
+    color: cyan;
+    margin-right: 20px;
+    /* float: right; */
+    display: inline;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    /* text-decoration: underline; */
+    background: cyan;
+    color: #060c21;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow:  0 0 25px #00bcd4,0 0 50px #0ef;
+}
+
+.home-content {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+
+.home-discription {
+    border-radius: 10px;
+    /* width: 35%; */
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+.home-discription a {
+    padding: 2% 6%;
+    background: #0ef;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #060c21;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.home-discription a:hover{
+    box-shadow:  0 0 25px #00bcd4,0 0 50px #0ef;
+    padding: 2% 7%;
+}
+.home-discription h2{
+    font-weight: bold;
+}
+.home-discription h2 span{
+    color: cyan;
+}
+
+.home-content img {
+    max-width: 50%;
+    border-radius: 30px;
+}
+
+.section {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.about-content {
+    align-items: center;
+    text-align: left;
+}
+
+.about-content img {
+    width: 50%;
+    border-radius: 15%;
+}
+.about-me h2{
+    font-weight: bold;
+}
+.about-me h2 span{
+    color: cyan;
+}
+
+.about-me a{
+    padding: 2% 6%;
+    background: #0ef;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #060c21;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    /* margin-right: 5%; */
+}
+.about-me a:hover{
+    box-shadow:  0 0 25px #00bcd4,0 0 50px #0ef;
+    padding: 2% 7%;
+}
+
+.skils-content{
+    align-items: center;
+    justify-content:center;
+    text-transform: capitalize;
+}
+
+.skils{
+    border-radius: 30px;
+    width: 40%;
+    height: fit-content;
+    margin: 5% auto;
+    padding: 3%;
+    box-shadow:  0 0 5px #00bcd4,0 0 25px #0ef;
+}
+.skils li{
+    padding: 15px;
+}
+.bar{
+    /* background: rgba(196, 186, 186, 0.3); */
+    display: block;
+    height: 10px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    box-shadow:  0 0 10px #00bcd4,0 0 20px #0ef;
+}
+.bar span{
+    border-radius: 8px;
+    height: 10px;
+    float: left;
+    background: linear-gradient(135deg, rgb(116, 226, 241)0%, rgb(85, 245, 95)100%);
+}
+.javascript{
+    width: 60%;
+}
+.skils a{
+    padding: 2% 6%;
+    background: #0ef;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #060c21;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.skils a:hover{
+    box-shadow:  0 0 25px #00bcd4,0 0 50px #0ef;
+    padding: 2% 7%;
+}
+.creativity{
+    width: 90%;
+}
+.problem-solving{
+    width: 85%;
+}
+.project {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5%;
+    border-radius: 20px;
+        /* background-color: #555; */
+    box-shadow:  0 0 25px #00bcd4,0 0 40px #0ef;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 8%);
+    padding: 8px;
+    margin-bottom: 8%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow:  0 0 10px #00bcd4,0 0 20px #0ef;
+}
+
+form button {
+    width: 95%;
+    padding: 1.5%;
+    background: linear-gradient(135deg, rgb(116, 226, 241)0%, rgb(85, 245, 95)100%);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    /* transition: background-color 0.4s ease; */
+    transition: all 0.2s ease;
+}
+
+form button:hover {
+    padding: 2%;
+    box-shadow:  0 0 25px #00bcd4,0 0 30px rgb(85, 245, 95)
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+   </style>
+  <script>
+    // Optional: Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Get form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+      // Clear form fields
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    });
+
+  </script>
+</head>
+
+<body>
+
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo"><h2> Logo</h2> </a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skils">skils</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- home section -->
+  <section id="home" class="section mb-sm-3">
+    <div class="container ">
+      <div class=" home-content d-sm-flex">
+        <div class="home-discription">
+              <h2 class="mb-4"> Hello,<br> It's Me  <span class="fs-1">Bandhana Gautam</span></h2>
+                <p class="mb-5"> welcome to my web developer portfolio. I'm Bandhana Gautam a creative web-designer, web-developer with a passion for creating beautifull responsive
+                  and user-friendly websites. I am a passionate front-end  and Backend web developer with experience in building responsive and
+                  user-friendly websites.
+                </p>
+              <a href="#">More about me</a>
+        </div>
+        <img src="https://i.pinimg.com/originals/72/ec/8a/72ec8a4afd7f22dbe8491719080442b6.jpg" class="img-fluid m-sm-1">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="fw-bold">ABOUT ME</h2>
+      <div class="about-content d-sm-flex">
+        <img src="https://i.pinimg.com/originals/72/ec/8a/72ec8a4afd7f22dbe8491719080442b6.jpg" class="img-fluid m-sm-4">
+        <div class="about-me px-sm-5">
+          <h4> Hello, </h4>
+          <h2 class="mb-4">I am <span>Bandhana Gautam</span> <br> a creative <span>web-designer</span></h2>
+          <p> Welcome to my web developer portfolio I'm Bandhana Gautam a creative web-designer, web-developer with a passion for creating beautifull responsive
+            and user-friendly websites. <br> I have worked on a vority of web-projects simple-calculator age-calculator  ...</p>
+           <p class="mb-5">I am a passionate web developer with over 1 year experience in this field to building responsive and user-friendly websites.</p>
+          <a href="#" class="me-4 ">More about me</a>
+          <a href="#">Download cv</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skils section -->
+  <section id="skils" class="section">
+    <div class="container">
+      <h2 class="fw-bold ">MY SKILS</h2>
+      <div class="skils-content d-sm-flex m-sm-5">
+        <div class="skils text-sm-start">
+          <h1>Technical Skils</h1>
+          <li>
+            <h4>HTML</h4>
+            <span class="bar"><span class="html w-75"> </span></span>
+          </li>
+          <li>
+            <h4>CSS</h4>
+            <span class="bar"><span class="css w-75"> </span></span>
+          </li>
+          <li>
+            <h4>JAVASCRIPT</h4>
+            <span class="bar"><span class="javascript w-75"> </span></span>
+          </li>
+          <li class="mb-5">
+            <h4>PHP</h4>
+            <span class="bar"><span class="c++ w-75"> </span></span>
+          </li>
+          <a href="#">more ...</a>
+        </div>
+
+        <div class="skils text-sm-start">
+          <h1>Profectional Skils</h1>
+          <li>
+            <h4>Creativity</h4>
+            <span class="bar"><span class="creativity"> </span></span>
+          </li>
+          <li>
+            <h4>Quick Learner</h4>
+            <span class="bar"><span class="Qick Learner w-100"> </span></span>
+          </li>
+          <li>
+            <h4>Problem-Solving</h4>
+            <span class="bar"><span class="problem-solving"> </span></span>
+          </li>
+          <li class="mb-5">
+            <h4>Teamwork</h4>
+            <span class="bar"><span class="teamwork w-75"> </span></span>
+          </li>
+          <a href="#">More ...</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="fw-bold">PROJECTS</h2>
+      <div class="project mt-5">
+        <img src="/image/pi.PNG" alt="Project 1" height="200px" width="300px">
+        <img src="/image/pi1.PNG" alt="Project 1" height="200px" width="200px">
+        <h3>Project 1</h3>
+        <p>Description of Project 1</p>
+      </div>
+      <div class="project">
+        <img src="/image/pi2.PNG" alt="Project 2" height="200px" width="200px">
+        <h3>Project 2</h3>
+        <p>Description of Project 2</p>
+        <p>A responsive, vakid and user freindly feedback form</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section m-sm-5">
+    <div class="container">
+      <h2 class="mb-5 fw-bold">CONTECT ME</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Bandhana Gautam. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
